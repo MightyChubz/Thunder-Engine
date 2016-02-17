@@ -53,7 +53,7 @@ public class Main implements Runnable {
     }
 
     private void load() {
-        if (glfwInit() != GLFW_FALSE)
+        if (glfwInit() != GLFW_TRUE)
             throw new IllegalArgumentException("GLFW could not be initialized!");
 
         glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
