@@ -6,7 +6,6 @@ import com.MightyChubz.core.gfx.Texture;
 import com.MightyChubz.core.interfaces.MainGameMethods;
 
 import java.awt.image.BufferedImage;
-import java.io.File;
 
 public class TestingClass extends Screen implements MainGameMethods {
     int PlayerID;
@@ -28,7 +27,6 @@ public class TestingClass extends Screen implements MainGameMethods {
     }
 
     public static void main(String[] args) {
-        System.setProperty("org.lwjgl.librarypath", new File("native").getAbsolutePath());
         new Main(new TestingClass()).start();
     }
 }

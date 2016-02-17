@@ -2,9 +2,10 @@ package com.MightyChubz.core;
 
 import com.MightyChubz.core.gfx.Color;
 import com.MightyChubz.core.interfaces.MainGameMethods;
-import org.lwjgl.glfw.GLFWKeyCallback;
 import org.lwjgl.glfw.GLFWVidMode;
 import org.lwjgl.opengl.GL;
+
+import java.io.File;
 
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
@@ -29,6 +30,7 @@ public class Main implements Runnable {
     }
 
     public void start() {
+        System.setProperty("org.lwjgl.librarypath", new File("native").getAbsolutePath());
         running = true;
         thread = new Thread(this, "Main");
         thread.start();
