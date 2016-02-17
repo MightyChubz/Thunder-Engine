@@ -7,6 +7,8 @@ import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
 
 public class Screen {
+    public static int width, height;
+
     public static void renderTexture(int textureID, Vector2f position) {
         glPushMatrix();
         glTranslatef(position.x, position.y, 0);
@@ -39,5 +41,10 @@ public class Screen {
 
     public static void setScreenColor(int r, int g, int b, int a) {
         glClearColor(r, g, b, a);
+    }
+
+    public static void setScreenSize(int width, int height) {
+        Screen.width = width - 109;
+        Screen.height = height / 2 + 192;
     }
 }

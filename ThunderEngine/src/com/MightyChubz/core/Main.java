@@ -107,6 +107,10 @@ public class Main implements Runnable {
         Screen.setVsyncBuffer(1);
         GL.createCapabilities();
 
+        Screen.setScreenSize(width, height);
+
+        glViewport(0, 0, width, height);
+
         glMatrixMode(GL_PROJECTION);
         glOrtho(0, width, height, 0, -1, 1);
         glMatrixMode(GL_MODELVIEW);
@@ -126,7 +130,6 @@ public class Main implements Runnable {
         glEnable(GL_TEXTURE_2D);
 
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        Screen.setScreenColor(Color.BLACK);
 
         glDepthFunc(GL_DEPTH_FUNC);
         glEnable(GL_BLEND);
