@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="ThunderEngine:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ThunderEngine_jar</output-path>
+    <root id="archive" name="ThunderEngine.jar">
+      <element id="module-output" name="ThunderEngine" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/lwjgl.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
