@@ -1,11 +1,7 @@
 import com.MightyChubz.core.*;
-import com.MightyChubz.core.gfx.QuadImage;
-import com.MightyChubz.core.gfx.Texture;
 import com.MightyChubz.core.interfaces.MainGameMethods;
 
 import java.awt.image.BufferedImage;
-
-import static org.lwjgl.glfw.GLFW.*;
 
 public class TestingClass extends Screen implements MainGameMethods {
     GameObject player = new GameObject();
@@ -18,16 +14,16 @@ public class TestingClass extends Screen implements MainGameMethods {
     }
 
     public void update() {
-        if (Input.isKeyDown(GLFW_KEY_W))
+        if (Input.isKeyDown(Input.W))
             player.transform.position.y -= 1;
 
-        if (Input.isKeyDown(GLFW_KEY_S))
+        if (Input.isKeyDown(Input.S))
             player.transform.position.y += 1;
 
-        if (Input.isKeyDown(GLFW_KEY_A))
+        if (Input.isKeyDown(Input.A))
             player.transform.position.x -= 1;
 
-        if (Input.isKeyDown(GLFW_KEY_D))
+        if (Input.isKeyDown(Input.D))
             player.transform.position.x += 1;
     }
 
