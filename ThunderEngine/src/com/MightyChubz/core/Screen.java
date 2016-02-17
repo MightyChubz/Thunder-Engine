@@ -1,13 +1,15 @@
 package com.MightyChubz.core;
 
 import com.MightyChubz.core.gfx.Color;
+import com.MightyChubz.core.mathf.Vector2f;
 
+import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
 
 public class Screen {
-    public static void renderTexture(int textureID, int x, int y) {
+    public static void renderTexture(int textureID, Vector2f position) {
         glPushMatrix();
-        glTranslatef(x, y, 0);
+        glTranslatef(position.x, position.y, 0);
         glBindTexture(GL_TEXTURE_2D, textureID);
         glBegin(GL_QUADS);
         {
@@ -25,6 +27,10 @@ public class Screen {
         }
         glEnd();
         glPopMatrix();
+    }
+
+    public static void setVsyncBuffer(int vsyncBufferAmount) {
+        glfwSwapInterval(vsyncBufferAmount);
     }
 
     public static void setScreenColor(Color color) {

@@ -2,6 +2,7 @@ package com.MightyChubz.core;
 
 import com.MightyChubz.core.gfx.Color;
 import com.MightyChubz.core.interfaces.MainGameMethods;
+import org.lwjgl.glfw.GLFWKeyCallback;
 import org.lwjgl.glfw.GLFWVidMode;
 import org.lwjgl.opengl.GL;
 
@@ -20,6 +21,8 @@ public class Main implements Runnable {
 
     private long window;
     private MainGameMethods methods;
+
+    private GLFWKeyCallback keyCallback;
 
     public Main(Object className) {
         if (className instanceof MainGameMethods) {
@@ -99,9 +102,9 @@ public class Main implements Runnable {
         GLFWVidMode vidMode = glfwGetVideoMode(glfwGetPrimaryMonitor());
 
         glfwSetWindowPos(window, (vidMode.width() - width) / 2, (vidMode.height() - height) / 2);
-        glfwSetKeyCallback(window, new Input());
+        glfwSetKeyCallback(window, keyCallback = new Input());
         glfwMakeContextCurrent(window);
-        glfwSwapInterval(1);
+        Screen.setVsyncBuffer(1);
         GL.createCapabilities();
 
         glMatrixMode(GL_PROJECTION);
