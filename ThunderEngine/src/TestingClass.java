@@ -1,6 +1,7 @@
 import com.MightyChubz.core.*;
 import com.MightyChubz.core.gfx.Color;
 import com.MightyChubz.core.interfaces.MainGameMethods;
+import com.MightyChubz.core.mathf.Vector2f;
 
 import java.awt.image.BufferedImage;
 
@@ -30,9 +31,11 @@ public class TestingClass extends Screen implements MainGameMethods {
         player.collider.keepWithinScreen(player.transform.position, player.renderer);
     }
 
+    //BRB
     public void render() {
         setScreenColor(Color.WHITE);
 
+        player.collider.rayCastX(player.transform.position, new Vector2f(10, 0), 90, 200);
         renderTexture(player.renderer.texture, player.transform.position, player.transform.scale);
     }
 

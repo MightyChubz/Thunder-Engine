@@ -13,6 +13,7 @@ public class Screen {
         glPushMatrix();
         glTranslatef(position.x, position.y, 0);
         glBindTexture(GL_TEXTURE_2D, textureID);
+        glColor3d(1, 1, 1);
         glBegin(GL_QUADS);
         {
             glTexCoord2d(0, 0);
