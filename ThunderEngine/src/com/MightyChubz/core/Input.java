@@ -4,6 +4,9 @@ import org.lwjgl.glfw.GLFWKeyCallback;
 
 import static org.lwjgl.glfw.GLFW.*;
 
+/**
+ * The input class allows up to the input of 40+ at the moment.
+ */
 public class Input extends GLFWKeyCallback {
     public static final int THUNDER_W = GLFW_KEY_W;
     public static final int THUNDER_S = GLFW_KEY_S;
@@ -53,10 +56,26 @@ public class Input extends GLFWKeyCallback {
 
     public static final boolean[] keys = new boolean[55536];
 
+    /**
+     * The invoke method detects any input with the keyboard and handles it.
+     * It also adds the key code to an array if the key is held down.
+     *
+     * @param window
+     * @param key
+     * @param scancode
+     * @param action
+     * @param mods
+     */
     public void invoke(long window, int key, int scancode, int action, int mods) {
         keys[key] = action != GLFW_RELEASE;
     }
 
+    /**
+     * Checks weather or not a key is held down
+     *
+     * @param keycode
+     * @return Boolean
+     */
     public static boolean isKeyDown(int keycode) {
         return keys[keycode];
     }
