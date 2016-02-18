@@ -12,6 +12,9 @@ import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.system.MemoryUtil.NULL;
 
+/**
+ * The main class is what handle the thread and most of the OpenGL.
+ */
 public class Main implements Runnable {
     public Thread thread;
     public boolean running = false;
@@ -24,6 +27,13 @@ public class Main implements Runnable {
 
     private GLFWKeyCallback keyCallback;
 
+    /**
+     * The constructer gets the object that was given to it and checks if it was the MainGameMethods interface.
+     * If it does, the class will start using calling it a parts of the class.
+     * @param className
+     *
+     * @exception IllegalArgumentException;
+     */
     public Main(Object className) {
         if (className instanceof MainGameMethods) {
             methods = (MainGameMethods) className;
@@ -32,6 +42,9 @@ public class Main implements Runnable {
                     " has no MainGameMethods interface!");
     }
 
+    /**
+     * The start method will the start the thread causing it to call the run method.
+     */
     public void start() {
         System.setProperty("org.lwjgl.librarypath", new File("native").getAbsolutePath());
         running = true;
@@ -39,10 +52,10 @@ public class Main implements Runnable {
         thread.start();
     }
 
-    public void stop() {
-        running = false;
-    }
-
+    /**
+     * The run method control nearly all logic in the class,
+     * this class is responsible for the game loop and all other methods in this class.
+     */
     public void run() {
         load();
 
@@ -89,6 +102,13 @@ public class Main implements Runnable {
         }
     }
 
+    /**
+     * The load method sets up the window, context and viewport.
+     * Without this method most of the code given to the LWJGL would not work.
+     *
+     * @exception IllegalArgumentException
+     * @exception RuntimeException
+     */
     private void load() {
         if (glfwInit() != GLFW_TRUE)
             throw new IllegalArgumentException("GLFW could not be initialized!");
@@ -121,12 +141,18 @@ public class Main implements Runnable {
         glfwShowWindow(window);
     }
 
+    /**
+     * This method calls the poll events and the update for the interface.
+     */
     private void update() {
         glfwPollEvents();
 
         methods.update();
     }
 
+    /**
+     * This method sets up OpenGL for rendering texture.
+     */
     private void render() {
         glEnable(GL_TEXTURE_2D);
 

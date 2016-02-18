@@ -9,8 +9,20 @@ import java.nio.ByteBuffer;
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.opengl.GL11.GL_UNSIGNED_BYTE;
 
+/**
+ * This class handles the loading of a texture to the RAM (Random Access Memory), it does this by using a byte buffer.
+ */
 public class Texture {
-    public static final int BYTES_PER_PIXEL = 4;
+    private static final int BYTES_PER_PIXEL = 4;
+
+    /**
+     * This method uses byte buffer to create a memory version the texture that the user (you) want to render.
+     * This class can’t and shouldn't be used for anything but the engine.
+     *
+     * @param image
+     * @param shouldInvert
+     * @return int
+     */
     public static int LoadTexturePNG(BufferedImage image, boolean shouldInvert) {
         int[] pixels = new int[image.getWidth() * image.getHeight()];
         image.getRGB(0, 0, image.getWidth(), image.getHeight(), pixels, 0, image.getHeight());

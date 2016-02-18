@@ -4,7 +4,17 @@ import com.MightyChubz.core.mathf.Vector2f;
 
 import static org.lwjgl.opengl.GL11.*;
 
+/**
+ * This class handles everything collision based.
+ */
 public class Collide {
+    /**
+     * This method if used right, will prevent the game object from leaving the windows boundaries.
+     *
+     * @param position
+     * @param renderer
+     * @return Vector2f
+     */
     public Vector2f keepWithinScreen(Vector2f position, SpriteRenderer renderer) {
         if (position.x < 0)
             position.x += 5;
@@ -21,6 +31,14 @@ public class Collide {
         return position;
     }
 
+    /**
+     * Currently this only draws the ray caster but has no logic toward it.
+     *
+     * @param position
+     * @param length
+     * @param w
+     * @param h
+     */
     public void rayCastX(Vector2f position, int length, int w, int h) {
         glDisable(GL_TEXTURE_2D);
         glPushMatrix();
