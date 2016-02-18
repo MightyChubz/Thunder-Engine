@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23fbef2d-e66a-462f-bfe7-ced379701f97" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TestingClass.java" afterPath="$PROJECT_DIR$/src/TestingClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/MightyChubz/core/Collide.java" afterPath="$PROJECT_DIR$/src/com/MightyChubz/core/Collide.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/MightyChubz/core/Input.java" afterPath="$PROJECT_DIR$/src/com/MightyChubz/core/Input.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/MightyChubz/core/Screen.java" afterPath="$PROJECT_DIR$/src/com/MightyChubz/core/Screen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/MightyChubz/core/SpriteRenderer.java" afterPath="$PROJECT_DIR$/src/com/MightyChubz/core/SpriteRenderer.java" />
     </list>
     <ignored path="ThunderEngine.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,10 +36,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestingClass.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestingClass.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TestingClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38686132">
+            <state vertical-scroll-proportion="0.0">
               <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -116,11 +112,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Input.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Input.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/MightyChubz/core/Input.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.919708">
+              <caret line="42" column="50" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -179,8 +175,8 @@
         <option value="$PROJECT_DIR$/src/com/MightyChubz/core/Screen.java" />
         <option value="$PROJECT_DIR$/src/com/MightyChubz/core/SpriteRenderer.java" />
         <option value="$PROJECT_DIR$/src/com/MightyChubz/core/Collide.java" />
-        <option value="$PROJECT_DIR$/src/com/MightyChubz/core/Input.java" />
         <option value="$PROJECT_DIR$/src/TestingClass.java" />
+        <option value="$PROJECT_DIR$/src/com/MightyChubz/core/Input.java" />
       </list>
     </option>
   </component>
@@ -1095,16 +1091,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/MightyChubz/core/Input.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/MightyChubz/core/Screen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1117,8 +1103,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TestingClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38686132">
+        <state vertical-scroll-proportion="0.0">
           <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/MightyChubz/core/Input.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.919708">
+          <caret line="42" column="50" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
