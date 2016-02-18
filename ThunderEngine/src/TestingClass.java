@@ -11,8 +11,9 @@ public class TestingClass extends Screen implements MainGameMethods {
     public void load() {
         BufferedImage big = ResourceLoader.LoadImageResource("Spritesheet.png");
 
+        player.transform.scale = new Vector2f(1, 1);
         player.renderer.initQuadImage(big, 16, 16);
-        player.renderer.setTextureFromQuad(0);
+        player.renderer.setTextureFromQuad(0, player.transform.scale, 128);
     }
 
     public void update() {
@@ -31,12 +32,11 @@ public class TestingClass extends Screen implements MainGameMethods {
         player.collider.keepWithinScreen(player.transform.position, player.renderer);
     }
 
-    //BRB
     public void render() {
         setScreenColor(Color.WHITE);
 
-        player.collider.rayCastX(player.transform.position, new Vector2f(10, 0), 90, 200);
-        renderTexture(player.renderer.texture, player.transform.position, player.transform.scale);
+        player.collider.rayCastX(player.transform.position, 150, player.renderer.renderWidth / 2, player.renderer.renderHeight / 2);
+        renderTexture(player.renderer.texture, player.transform.position, player.renderer.renderWidth, player.renderer.renderHeight);
     }
 
     public static void main(String[] args) {

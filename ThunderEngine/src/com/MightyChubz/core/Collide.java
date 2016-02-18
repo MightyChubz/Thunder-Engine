@@ -3,7 +3,6 @@ package com.MightyChubz.core;
 import com.MightyChubz.core.mathf.Vector2f;
 
 import static org.lwjgl.opengl.GL11.*;
-import static org.lwjgl.glfw.GLFW.*;
 
 public class Collide {
     public Vector2f keepWithinScreen(Vector2f position, SpriteRenderer renderer) {
@@ -22,10 +21,10 @@ public class Collide {
         return position;
     }
 
-    public void rayCastX(Vector2f position, Vector2f rotation, int angle,int length) {
+    public void rayCastX(Vector2f position, int length, int w, int h) {
         glDisable(GL_TEXTURE_2D);
         glPushMatrix();
-        glTranslatef(position.x, position.y, 0.5f);
+        glTranslatef(position.x + w / 2, position.y + h, 0.5f);
         glColor3d(0, 1, 0);
         glBegin(GL_LINES);
         {

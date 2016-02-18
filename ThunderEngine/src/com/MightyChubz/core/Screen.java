@@ -9,7 +9,7 @@ import static org.lwjgl.opengl.GL11.*;
 public class Screen {
     public static int width, height;
 
-    public static void renderTexture(int textureID, Vector2f position, Vector2f scale) {
+    public static void renderTexture(int textureID, Vector2f position, int width, int height) {
         glPushMatrix();
         glTranslatef(position.x, position.y, 0);
         glBindTexture(GL_TEXTURE_2D, textureID);
@@ -20,13 +20,13 @@ public class Screen {
             glVertex2d(0, 0);
 
             glTexCoord2d(1, 0);
-            glVertex2d(128 * scale.x, 0);
+            glVertex2d(width, 0);
 
             glTexCoord2d(1, 1);
-            glVertex2d(128 * scale.x, 128 * scale.y);
+            glVertex2d(width, height);
 
             glTexCoord2d(0, 1);
-            glVertex2d(0, 128 * scale.y);
+            glVertex2d(0, height);
         }
         glEnd();
         glPopMatrix();
