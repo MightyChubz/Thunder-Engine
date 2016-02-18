@@ -15,35 +15,25 @@ public class TestingClass extends Screen implements MainGameMethods {
     }
 
     public void update() {
-        if (Input.isKeyDown(Input.W))
+        if (Input.isKeyDown(Input.THUNDER_W))
             player.transform.position.y -= 5;
 
-        if (Input.isKeyDown(Input.S))
+        if (Input.isKeyDown(Input.THUNDER_S))
             player.transform.position.y += 5;
 
-        if (Input.isKeyDown(Input.A))
+        if (Input.isKeyDown(Input.THUNDER_A))
             player.transform.position.x -= 5;
 
-        if (Input.isKeyDown(Input.D))
+        if (Input.isKeyDown(Input.THUNDER_D))
             player.transform.position.x += 5;
 
-        if (player.transform.position.x < 0)
-            player.transform.position.x += 5;
-
-        if (player.transform.position.y < 0)
-            player.transform.position.y += 5;
-
-        if (player.transform.position.x + player.renderer.width > Screen.width)
-            player.transform.position.x -= 5;
-
-        if (player.transform.position.y + player.renderer.height > Screen.height)
-            player.transform.position.y -= 5;
+        player.collider.keepWithinScreen(player.transform.position, player.renderer);
     }
 
     public void render() {
         setScreenColor(Color.WHITE);
 
-        renderTexture(player.renderer.texture, player.transform.position);
+        renderTexture(player.renderer.texture, player.transform.position, player.transform.scale);
     }
 
     public static void main(String[] args) {

@@ -14,6 +14,8 @@ public class SpriteRenderer {
     public void initQuadImage(BufferedImage bigImage, int sourceWidth, int sourceHeight) {
         image = new QuadImage(sourceHeight - 1, sourceWidth - 1, bigImage);
         image.initQuad(sourceWidth, sourceHeight);
+
+        setTextureFromQuad(0);
     }
 
     public void setTextureFromQuad(int index) {
