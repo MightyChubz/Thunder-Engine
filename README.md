@@ -1,9 +1,9 @@
 #Description
 
-This is a game engine I'm going to build as a hobby, I want to make it easy and powerful at the same time. This will be controversially using Java v1.8 as the source code. Also, make sure to read the PDF that comes with the project, this will help you setup the project for use.
+This is a game engine I'm going to build as a hobby, I want to make it easy and powerful at the same time. This will be controversially using Java v1.8 as the source code. Also, make sure to read the PDF that comes with the project, this will help your setup for the use of the project.
 
-##Will The Game Engine Have Wrappers for Other Languages?
-At the moment, no. This is going to be exclusively for Java.
+##Will The Game Engine Have Port\Wrappers for Other Languages?
+At the moment, no. This is going to be exclusively for Java v1.8.
 
 ##Will The Game Engine Be Free?
 It will be free.
