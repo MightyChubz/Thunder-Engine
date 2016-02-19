@@ -1,12 +1,15 @@
 package com.MightyChubz.core;
 
-import com.MightyChubz.core.gfx.Color;
+import com.MightyChubz.core.gfx.Behavior;
 import com.MightyChubz.core.interfaces.MainGameMethods;
+import org.lwjgl.BufferUtils;
 import org.lwjgl.glfw.GLFWKeyCallback;
 import org.lwjgl.glfw.GLFWVidMode;
 import org.lwjgl.opengl.GL;
 
 import java.io.File;
+import java.nio.ByteBuffer;
+import java.nio.DoubleBuffer;
 
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
@@ -24,6 +27,7 @@ public class Main implements Runnable {
 
     private long window;
     private MainGameMethods methods;
+    private double newY = 400, newX = 500;
 
     private GLFWKeyCallback keyCallback;
 
@@ -119,15 +123,17 @@ public class Main implements Runnable {
         if (window == NULL)
             throw new RuntimeException("Could not create window!");
 
+
         GLFWVidMode vidMode = glfwGetVideoMode(glfwGetPrimaryMonitor());
 
         glfwSetWindowPos(window, (vidMode.width() - width) / 2, (vidMode.height() - height) / 2);
         glfwSetKeyCallback(window, keyCallback = new Input());
         glfwMakeContextCurrent(window);
-        Screen.setVsyncBuffer(1);
+        Behavior.setVsyncBuffer(1);
         GL.createCapabilities();
 
-        Screen.setScreenSize(width, height);
+        Behavior.setScreenSize(width, height);
+        glfwSetCursorPos(window, Behavior.width / 2 + 25, Behavior.height / 2 + 25);
 
         glViewport(0, 0, width, height);
 
@@ -146,6 +152,22 @@ public class Main implements Runnable {
      */
     private void update() {
         glfwPollEvents();
+
+        DoubleBuffer xpos = BufferUtils.createDoubleBuffer(8);
+        DoubleBuffer ypos = BufferUtils.createDoubleBuffer(8);
+
+        glfwGetCursorPos(window, xpos, ypos);
+
+        xpos.rewind();
+        ypos.rewind();
+
+        newY = ypos.get();
+        newX = xpos.get();
+
+        double deltaX = newX;
+        double deltaY = newY;
+
+        Behavior.setDeltaMousePos(deltaX, deltaY);
 
         methods.update();
     }
