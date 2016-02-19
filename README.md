@@ -1,6 +1,6 @@
 #Description
 
-This is a game engine I'm going to build as a hobby, I want to make it easy and powerful at the same time. This will be controversially using Java v1.8 as the source code. Also, make sure to read the PDF that comes with the project, this will help your setup for the use of the project.
+Thunder engine is a game engine built around LWJGL (Light Weight Java Game Library), it’s made to help 2D games easier to develop than before.
 
 ##What License Will This Engine Have?
 ![Creative Commons Attribution-NoDerivatives 4.0 International License](https://i.creativecommons.org/l/by-nd/4.0/88x31.png "Creative Commons Attribution-NoDerivatives 4.0 International License")
