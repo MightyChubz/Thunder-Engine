@@ -6,12 +6,15 @@ import com.MightyChubz.core.mathf.Vector2f;
 
 public class TestingClass extends Behavior implements MainGameMethods {
     GameObject player = new GameObject();
-
+    Audio audioPlayer = new Audio();
 
     public void load() {
         player.transform.scale = new Vector2f(1, 1);
         player.renderer.initQuadImage(ResourceLoader.LoadImageResource("Spritesheet.png"), 16, 16);
         player.renderer.setTextureFromQuad(0, player.transform.scale, 128);
+
+        audioPlayer.init();
+        audioPlayer.demo();
     }
 
     public void update() {
