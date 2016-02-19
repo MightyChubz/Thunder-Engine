@@ -15,6 +15,7 @@ public class SpriteRenderer {
     public int texture;
     public boolean shouldInvert;
     public int renderWidth, renderHeight, width, height;
+    public int centerRWidth, centerRHeight;
 
     /**
      * This method initializes the quad image class to allow sprite sheets to be used.
@@ -43,6 +44,8 @@ public class SpriteRenderer {
         renderHeight = (int) (imageSize * scale.y);
         width = image.sprites[index].getWidth();
         height = image.sprites[index].getHeight();
+        centerRWidth = renderWidth / 2;
+        centerRHeight = renderHeight/ 2;
         texture = Texture.LoadTexturePNG(image.sprites[index], shouldInvert);
     }
 
@@ -59,6 +62,8 @@ public class SpriteRenderer {
         renderHeight = (int) (imageSize * scale.y);
         width = image.getWidth();
         height = image.getHeight();
+        centerRWidth = renderWidth / 2;
+        centerRHeight = renderHeight/ 2;
         texture = Texture.LoadTexturePNG(image, shouldInvert);
     }
 }

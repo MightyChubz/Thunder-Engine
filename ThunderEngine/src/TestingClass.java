@@ -32,7 +32,8 @@ public class TestingClass extends Behavior implements MainGameMethods {
     public void render() {
         setScreenColor(Color.WHITE);
 
-        player.collider.rayCastX(player.transform.position, 150, player.renderer.renderWidth / 2, player.renderer.renderHeight / 2);
+        SpriteRenderer render = (SpriteRenderer) player.GetComponet("SpriteRenderer");
+        player.collider.rayCastX(player.transform.position, 150, render.centerRWidth, render.centerRHeight);
         renderTexture(player.renderer.texture, player.transform.position, player.renderer.renderWidth, player.renderer.renderHeight);
     }
 
