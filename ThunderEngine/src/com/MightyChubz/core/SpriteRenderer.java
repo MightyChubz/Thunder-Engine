@@ -26,6 +26,8 @@ public class SpriteRenderer {
     public void initQuadImage(BufferedImage bigImage, int sourceWidth, int sourceHeight) {
         image = new QuadImage(sourceHeight, sourceWidth, bigImage);
         image.initQuad();
+
+        bigImage.flush();
     }
 
     /**

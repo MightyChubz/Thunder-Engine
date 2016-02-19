@@ -56,6 +56,8 @@ public class Texture {
 
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, image.getWidth(), image.getHeight(), 0, GL_RGBA, GL_UNSIGNED_BYTE, buffer);
 
+        image.flush();
+
         return textureID;
     }
 }

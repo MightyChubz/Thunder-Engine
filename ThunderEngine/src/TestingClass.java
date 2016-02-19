@@ -4,16 +4,12 @@ import com.MightyChubz.core.gfx.Color;
 import com.MightyChubz.core.interfaces.MainGameMethods;
 import com.MightyChubz.core.mathf.Vector2f;
 
-import java.awt.image.BufferedImage;
-
 public class TestingClass extends Behavior implements MainGameMethods {
     GameObject player = new GameObject();
 
     public void load() {
-        BufferedImage big = ResourceLoader.LoadImageResource("Spritesheet.png");
-
         player.transform.scale = new Vector2f(1, 1);
-        player.renderer.initQuadImage(big, 16, 16);
+        player.renderer.initQuadImage(ResourceLoader.LoadImageResource("Spritesheet.png"), 16, 16);
         player.renderer.setTextureFromQuad(0, player.transform.scale, 128);
     }
 

@@ -46,5 +46,7 @@ public class QuadImage {
                 sprites[(r * cols) + c] = big.getSubimage(c * sourceW, r * sourceH, sourceW, sourceH);
             }
         }
+
+        big.flush();
     }
 }
