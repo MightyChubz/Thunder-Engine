@@ -10,6 +10,7 @@ import static org.lwjgl.opengl.GL11.*;
  */
 public class Behavior {
     public static int width, height;
+    public static double deltaMouseX, deltaMouseY;
 
     /**
      * This is the most basic method in the class as all it does is draws images.
@@ -84,5 +85,16 @@ public class Behavior {
     public static void setScreenSize(int width, int height) {
         Behavior.width = width - 109;
         Behavior.height = height / 2 + 192;
+    }
+
+    /**
+     * Sets the delta of the mouse position.
+     *
+     * @param x
+     * @param y
+     */
+    public static void setDeltaMousePos(double x, double y) {
+        deltaMouseX = x;
+        deltaMouseY = y;
     }
 }

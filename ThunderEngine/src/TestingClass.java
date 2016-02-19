@@ -14,17 +14,20 @@ public class TestingClass extends Behavior implements MainGameMethods {
     }
 
     public void update() {
-        if (Input.isKeyDown(Input.THUNDER_W))
-            player.transform.position.y -= 5;
+//        if (Input.isKeyDown(Input.THUNDER_W))
+//            player.transform.position.y -= 5;
+//
+//        if (Input.isKeyDown(Input.THUNDER_S))
+//            player.transform.position.y += 5;
+//
+//        if (Input.isKeyDown(Input.THUNDER_A))
+//            player.transform.position.x -= 5;
+//
+//        if (Input.isKeyDown(Input.THUNDER_D))
+//            player.transform.position.x += 5;
 
-        if (Input.isKeyDown(Input.THUNDER_S))
-            player.transform.position.y += 5;
-
-        if (Input.isKeyDown(Input.THUNDER_A))
-            player.transform.position.x -= 5;
-
-        if (Input.isKeyDown(Input.THUNDER_D))
-            player.transform.position.x += 5;
+        player.transform.position.x = (float) deltaMouseX - player.renderer.centerRWidth;
+        player.transform.position.y = (float) deltaMouseY - player.renderer.centerRHeight;
 
         player.collider.keepWithinScreen(player.transform.position, player.renderer);
     }
