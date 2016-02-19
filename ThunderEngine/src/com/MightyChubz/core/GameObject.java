@@ -35,13 +35,14 @@ public class GameObject {
             glVertex2d(0, 0);
 
             glTexCoord2d(1, 0);
-            glVertex2d(renderer.renderWidth, 0);
+            glVertex2d(renderer.renderWidth * transform.scale.x, 0);
 
             glTexCoord2d(1, 1);
-            glVertex2d(renderer.renderWidth, renderer.renderHeight);
+            glVertex2d(renderer.renderWidth * transform.scale.x,
+                    renderer.renderHeight * transform.scale.y);
 
             glTexCoord2d(0, 1);
-            glVertex2d(0, renderer.renderHeight);
+            glVertex2d(0, renderer.renderHeight * transform.scale.y);
         }
         glEnd();
         glPopMatrix();

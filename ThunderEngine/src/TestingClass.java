@@ -7,6 +7,7 @@ import com.MightyChubz.core.mathf.Vector2f;
 public class TestingClass extends Behavior implements MainGameMethods {
     GameObject player = new GameObject();
 
+
     public void load() {
         player.transform.scale = new Vector2f(1, 1);
         player.renderer.initQuadImage(ResourceLoader.LoadImageResource("Spritesheet.png"), 16, 16);
@@ -40,7 +41,10 @@ public class TestingClass extends Behavior implements MainGameMethods {
         player.rayCastRight();
         player.rayCastLeft();
         player.rayCastDown();
-        player.renderTexture();
+
+        if (Mouse.isKeyReleased(Mouse.THUNDER_MOUSE_LEFT)) {
+            player.renderTexture();
+        }
     }
 
     public static void main(String[] args) {
