@@ -1,6 +1,6 @@
 package com.MightyChubz.core;
 
-import com.MightyChubz.core.gfx.Color;
+import com.MightyChubz.core.gfx.Behavior;
 import com.MightyChubz.core.interfaces.MainGameMethods;
 import org.lwjgl.glfw.GLFWKeyCallback;
 import org.lwjgl.glfw.GLFWVidMode;
@@ -124,10 +124,10 @@ public class Main implements Runnable {
         glfwSetWindowPos(window, (vidMode.width() - width) / 2, (vidMode.height() - height) / 2);
         glfwSetKeyCallback(window, keyCallback = new Input());
         glfwMakeContextCurrent(window);
-        Screen.setVsyncBuffer(1);
+        Behavior.setVsyncBuffer(1);
         GL.createCapabilities();
 
-        Screen.setScreenSize(width, height);
+        Behavior.setScreenSize(width, height);
 
         glViewport(0, 0, width, height);
 

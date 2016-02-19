@@ -1,5 +1,6 @@
 package com.MightyChubz.core;
 
+import com.MightyChubz.core.gfx.Behavior;
 import com.MightyChubz.core.mathf.Vector2f;
 
 import static org.lwjgl.opengl.GL11.*;
@@ -22,10 +23,10 @@ public class Collide {
         if (position.y < 0)
             position.y += 5;
 
-        if (position.x + renderer.width > Screen.width)
+        if (position.x + renderer.width > Behavior.width)
             position.x -= 5;
 
-        if (position.y + renderer.height > Screen.height)
+        if (position.y + renderer.height > Behavior.height)
             position.y -= 5;
 
         return position;

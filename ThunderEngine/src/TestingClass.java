@@ -1,11 +1,12 @@
 import com.MightyChubz.core.*;
+import com.MightyChubz.core.gfx.Behavior;
 import com.MightyChubz.core.gfx.Color;
 import com.MightyChubz.core.interfaces.MainGameMethods;
 import com.MightyChubz.core.mathf.Vector2f;
 
 import java.awt.image.BufferedImage;
 
-public class TestingClass extends Screen implements MainGameMethods {
+public class TestingClass extends Behavior implements MainGameMethods {
     GameObject player = new GameObject();
 
     public void load() {

@@ -1,15 +1,14 @@
-package com.MightyChubz.core;
+package com.MightyChubz.core.gfx;
 
-import com.MightyChubz.core.gfx.Color;
 import com.MightyChubz.core.mathf.Vector2f;
 
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
 
 /**
- * Screen handles anything towards rendering images or setting up what gets rendered on the window.
+ * Behavior handles anything towards rendering images or setting up what gets rendered on the window.
  */
-public class Screen {
+public class Behavior {
     public static int width, height;
 
     /**
@@ -83,7 +82,7 @@ public class Screen {
      * @param height
      */
     public static void setScreenSize(int width, int height) {
-        Screen.width = width - 109;
-        Screen.height = height / 2 + 192;
+        Behavior.width = width - 109;
+        Behavior.height = height / 2 + 192;
     }
 }
