@@ -16,7 +16,7 @@ public class Collide {
      * @param renderer
      * @return Vector2f
      */
-    public Vector2f keepWithinScreen(Vector2f position, SpriteRenderer renderer) {
+    public void keepWithinScreen(Vector2f position, SpriteRenderer renderer) {
         if (position.x < 0)
             position.x += 5;
 
@@ -28,8 +28,6 @@ public class Collide {
 
         if (position.y + renderer.height > Behavior.height)
             position.y -= 5;
-
-        return position;
     }
 
     /**

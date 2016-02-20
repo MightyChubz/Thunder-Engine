@@ -6,6 +6,7 @@ import com.MightyChubz.core.mathf.Vector2f;
 
 public class TestingClass extends Behavior implements MainGameMethods {
     GameObject player = new GameObject();
+    GameObject colTest = new GameObject();
     Audio audioPlayer = new Audio();
 
     public void load() {
@@ -13,8 +14,13 @@ public class TestingClass extends Behavior implements MainGameMethods {
         player.renderer.initQuadImage(ResourceLoader.LoadImageResource("Spritesheet.png"), 16, 16);
         player.renderer.setTextureFromQuad(0, player.transform.scale, 128);
 
-        audioPlayer.init();
-        audioPlayer.demo();
+        colTest.transform.scale = new Vector2f(1, 1);
+        colTest.renderer.initQuadImage(ResourceLoader.LoadImageResource("Spritesheet.png"), 16, 16);
+        colTest.renderer.setTextureFromQuad(0, colTest.transform.scale, 128);
+
+//        audioPlayer.initContext();
+//        audioPlayer.loadAudioFile(ResourceLoader.LoadResource("/Sad_Dreams.ogg"), true);
+//        audioPlayer.play();
     }
 
     public void update() {
@@ -33,13 +39,14 @@ public class TestingClass extends Behavior implements MainGameMethods {
         player.transform.position.x = (float) deltaMouseX - player.renderer.centerRWidth;
         player.transform.position.y = (float) deltaMouseY - player.renderer.centerRHeight;
 
+        colTest.transform.position = new Vector2f(0, 0);
+
         player.collider.keepWithinScreen(player.transform.position, player.renderer);
     }
 
     public void render() {
         setScreenColor(Color.WHITE);
 
-        SpriteRenderer render = (SpriteRenderer) player.GetComponent("SpriteRenderer");
         player.rayCastUp();
         player.rayCastRight();
         player.rayCastLeft();
@@ -48,6 +55,12 @@ public class TestingClass extends Behavior implements MainGameMethods {
         if (Mouse.isKeyReleased(Mouse.THUNDER_MOUSE_LEFT)) {
             player.renderTexture();
         }
+
+        colTest.renderTexture();
+    }
+
+    public void windowClose() {
+//        audioPlayer.close();
     }
 
     public static void main(String[] args) {

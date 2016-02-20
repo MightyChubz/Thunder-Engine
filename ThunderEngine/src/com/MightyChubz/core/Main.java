@@ -9,8 +9,6 @@ import org.lwjgl.opengl.GL;
 
 import java.io.File;
 
-import static org.lwjgl.openal.AL11.*;
-import static org.lwjgl.openal.AL.*;
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.system.MemoryUtil.NULL;
@@ -102,8 +100,10 @@ public class Main implements Runnable {
                 tick = 0;
             }
 
-            if (glfwWindowShouldClose(window) == GLFW_TRUE)
+            if (glfwWindowShouldClose(window) == GLFW_TRUE) {
+                methods.windowClose();
                 running = false;
+            }
         }
     }
 

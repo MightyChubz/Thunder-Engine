@@ -7,6 +7,7 @@ import org.lwjgl.openal.ALDevice;
 import org.lwjgl.stb.STBVorbisInfo;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
 
@@ -16,18 +17,94 @@ import static org.lwjgl.openal.ALUtil.checkALError;
 import static org.lwjgl.stb.STBVorbis.*;
 import static org.lwjgl.system.MemoryUtil.NULL;
 
+/**
+ * This class handles every to do with audio, it does this by converting the .ogg file into memory.
+ * It’s much like the texture.
+ */
 public class Audio {
+    private int source;
+    private ALDevice device;
+    private ALContext context;
 
-    public void init() {
-        ALDevice device = ALDevice.create(null);
-        ALContext.create(device);
+    /**
+     * This initializes the context of the audio and initializes the device.
+     */
+    public void initContext() {
+        device = ALDevice.create(null);
+        context = ALContext.create(device);
 
         ALCCapabilities capabilities = device.getCapabilities();
     }
 
-    public void demo() {
+    /**
+     * This method controls the loading of the file, this controls how its put into the memory,
+     * how it should buffer and what type of speaker it should player through.
+     *
+     * @param resource
+     * @param shouldLoop
+     */
+    public void loadAudioFile(InputStream resource, boolean shouldLoop) {
         STBVorbisInfo info = STBVorbisInfo.calloc();
-        ByteBuffer pcm = readVorbis("/Sad_Dreams.ogg", 32 * 1026, info);
+        ByteBuffer pcm = readVorbis(resource, 32 * 1026, info);
+
+        int buffer = alGenBuffers();
+        checkALError();
+
+        source = alGenSources();
+        checkALError();
+
+        alBufferData(buffer, AL_FORMAT_STEREO16, pcm, info.sample_rate());
+        checkALError();
+
+        info.free();
+
+        alSourcei(source, AL_BUFFER, buffer);
+        checkALError();
+
+        alSourcei(source, AL_LOOPING, shouldLoop ? AL_TRUE : AL_FALSE);
+        checkALError();
+    }
+
+    /**
+     * This plays the audio.
+     */
+    public void play() {
+        alSourcePlay(source);
+        checkALError();
+    }
+
+    /**
+     * This pauses the audio.
+     */
+    public void pause() {
+        alSourcePause(source);
+        checkALError();
+    }
+
+    /**
+     * This stops the audio.
+     */
+    public void stop() {
+        alSourceStop(source);
+        checkALError();
+    }
+
+    /**
+     * This is a very important class as it disposes of both context and device, thus freeing up memory.
+     */
+    public void close() {
+        device.destroy();
+        context.destroy();
+    }
+
+    /**
+     * This is a method to test the waters and to see if the audio plays fine.
+     *
+     * @param path
+     */
+    public void demo(String path) {
+        STBVorbisInfo info = STBVorbisInfo.calloc();
+        ByteBuffer pcm = readVorbis(ResourceLoader.LoadResource(path), 32 * 1026, info);
 
         int buffer = alGenBuffers();
         checkALError();
@@ -50,7 +127,16 @@ public class Audio {
         checkALError();
     }
 
-    private ByteBuffer readVorbis(String resource, int bufferSize, STBVorbisInfo info) {
+    /**
+     * This hand the file to IOUtil to handle converting into memory,
+     * after this opens the memory form of the .ogg file and start setting it up for use.
+     *
+     * @param resource
+     * @param bufferSize
+     * @param info
+     * @return ByteBuffer
+     */
+    private ByteBuffer readVorbis(InputStream resource, int bufferSize, STBVorbisInfo info) {
         ByteBuffer vorbis = null;
 
         try {

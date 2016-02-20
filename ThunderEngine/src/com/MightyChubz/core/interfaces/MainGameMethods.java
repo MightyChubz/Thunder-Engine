@@ -8,4 +8,5 @@ public interface MainGameMethods {
     void load();
     void update();
     void render();
+    void windowClose();
 }
