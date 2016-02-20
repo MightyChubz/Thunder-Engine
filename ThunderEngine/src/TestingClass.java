@@ -39,7 +39,15 @@ public class TestingClass extends Behavior implements MainGameMethods {
         player.transform.position.x = (float) deltaMouseX - player.renderer.centerRWidth;
         player.transform.position.y = (float) deltaMouseY - player.renderer.centerRHeight;
 
-        colTest.transform.position = new Vector2f(0, 0);
+        colTest.transform.position = new Vector2f(500, 200);
+
+        if (player.collider.rayCast(colTest, new Vector2f(player.transform.position.x - 150.0f / 2, player.transform.position.y),
+                Vector2f.LEFT, new Vector2f(150 / 2, 0)))
+            System.out.println("COLLISION!?!?!?!?");
+
+        if (player.collider.rayCast(colTest, new Vector2f(player.transform.position.x, player.transform.position.y - 150.0f / 2),
+                Vector2f.UP, new Vector2f(0, 150 / 2)))
+            System.out.println("COLLISION!?!?!?!?");
 
         player.collider.keepWithinScreen(player.transform.position, player.renderer);
     }
