@@ -50,26 +50,11 @@ public class Collide {
         return false;
     }
 
-    /**
-     * Creates an invisible, one-pixel thick line for directional collision.
-     *
-     * @param object
-     * @param position
-     * @param direction
-     * @param length
-     * @return boolean
-     */
-    public boolean rayCast(GameObject object, Vector2f position, Vector2f direction, Vector2f length) {
-        int size = 1;
+    public boolean rayCast(Vector2f direction, int length) {
+        
+    }
 
-        if (Math.abs(object.transform.position.x - (position.x + direction.x)) <
-                ((object.renderer.width * 3) + (size + length.x) + Math.sqrt(object.renderer.centerRWidth * 4)) * object.transform.scale.x) {
-            if (Math.abs(object.transform.position.y - (position.y + direction.y)) <
-                    ((object.renderer.width * 3) + (size + length.y) + Math.sqrt(object.renderer.centerRHeight * 4)) * object.transform.scale.x) {
-                return true;
-            }
-        }
+    public boolean boundingBox(Vector2f direction, int length) {
 
-        return false;
     }
 }

@@ -42,12 +42,8 @@ public class TestingClass extends Behavior implements MainGameMethods {
         colTest.transform.position = new Vector2f(500, 200);
 
         if (player.collider.rayCast(colTest, new Vector2f(player.transform.position.x - 150.0f / 2, player.transform.position.y),
-                Vector2f.LEFT, new Vector2f(150 / 2, 0)))
-            System.out.println("COLLISION!?!?!?!?");
-
-        if (player.collider.rayCast(colTest, new Vector2f(player.transform.position.x, player.transform.position.y - 150.0f / 2),
-                Vector2f.UP, new Vector2f(0, 150 / 2)))
-            System.out.println("COLLISION!?!?!?!?");
+                new Vector2f(player.renderer.renderWidth, player.renderer.renderHeight), new Vector2f(player.transform.position.x, 0)))
+            System.out.println("Collision!");
 
         player.collider.keepWithinScreen(player.transform.position, player.renderer);
     }
@@ -55,14 +51,16 @@ public class TestingClass extends Behavior implements MainGameMethods {
     public void render() {
         setScreenColor(Color.WHITE);
 
-        player.rayCastUp();
-        player.rayCastRight();
-        player.rayCastLeft();
-        player.rayCastDown();
+//        player.rayCastUp();
+//        player.rayCastRight();
+//        player.rayCastLeft();
+//        player.rayCastDown();
 
-        if (Mouse.isKeyReleased(Mouse.THUNDER_MOUSE_LEFT)) {
-            player.renderTexture();
-        }
+//        if (Mouse.isKeyReleased(Mouse.THUNDER_MOUSE_LEFT)) {
+//            player.renderTexture();
+//        }
+
+        player.renderTexture();
 
         colTest.renderTexture();
     }

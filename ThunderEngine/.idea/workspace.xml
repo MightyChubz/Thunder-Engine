@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23fbef2d-e66a-462f-bfe7-ced379701f97" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ThunderEngine_jar/ThunderEngine.jar" afterPath="$PROJECT_DIR$/out/artifacts/ThunderEngine_jar/ThunderEngine.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ThunderEngine/TestingClass.class" afterPath="$PROJECT_DIR$/out/production/ThunderEngine/TestingClass.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ThunderEngine/com/MightyChubz/core/Audio.class" afterPath="$PROJECT_DIR$/out/production/ThunderEngine/com/MightyChubz/core/Audio.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ThunderEngine/com/MightyChubz/core/Collide.class" afterPath="$PROJECT_DIR$/out/production/ThunderEngine/com/MightyChubz/core/Collide.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ThunderEngine/com/MightyChubz/core/IOUtil.class" afterPath="$PROJECT_DIR$/out/production/ThunderEngine/com/MightyChubz/core/IOUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TestingClass.java" afterPath="$PROJECT_DIR$/src/TestingClass.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/MightyChubz/core/Collide.java" afterPath="$PROJECT_DIR$/src/com/MightyChubz/core/Collide.java" />
     </list>
@@ -31,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TestingClass.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestingClass.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TestingClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5518248">
-              <caret line="45" column="52" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="44" column="86" selection-start-line="44" selection-start-column="86" selection-end-line="44" selection-end-column="86" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Collide.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Collide.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/MightyChubz/core/Collide.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="53" column="76" selection-start-line="53" selection-start-column="76" selection-end-line="53" selection-end-column="76" />
+            <state vertical-scroll-proportion="0.6321168">
+              <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -174,8 +168,8 @@
         <option value="$PROJECT_DIR$/src/com/MightyChubz/core/interfaces/MainGameMethods.java" />
         <option value="$PROJECT_DIR$/src/com/MightyChubz/core/IOUtil.java" />
         <option value="$PROJECT_DIR$/src/com/MightyChubz/core/Audio.java" />
-        <option value="$PROJECT_DIR$/src/com/MightyChubz/core/Collide.java" />
         <option value="$PROJECT_DIR$/src/TestingClass.java" />
+        <option value="$PROJECT_DIR$/src/com/MightyChubz/core/Collide.java" />
       </list>
     </option>
   </component>
@@ -1146,20 +1140,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/MightyChubz/core/Collide.java">
+    <entry file="file://$PROJECT_DIR$/src/TestingClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="76" selection-start-line="53" selection-start-column="76" selection-end-line="53" selection-end-column="76" />
+          <caret line="44" column="86" selection-start-line="44" selection-start-column="86" selection-end-line="44" selection-end-column="86" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestingClass.java">
+    <entry file="file://$PROJECT_DIR$/src/com/MightyChubz/core/Collide.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5518248">
-          <caret line="45" column="52" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.6321168">
+          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
