@@ -1,6 +1,7 @@
 package com.MightyChubz.core;
 
 import com.MightyChubz.core.gfx.Behavior;
+import com.MightyChubz.core.mathf.Transform;
 import com.MightyChubz.core.mathf.Vector2f;
 
 import static org.lwjgl.opengl.GL11.*;
@@ -50,11 +51,69 @@ public class Collide {
         return false;
     }
 
-    public boolean rayCast(Vector2f direction, int length) {
-        
+//    public boolean boundBox(Vector2f direction, GameObject object, GameObject collider) {
+//        if (direction == Vector2f.LEFT)
+//            return colBoxLeft(object, collider);
+//
+//        if (direction == Vector2f.RIGHT)
+//            return colBoxRight(object, collider);
+//
+//        if (direction == Vector2f.UP)
+//            return colBoxUp(object, collider);
+//
+//        return direction == Vector2f.DOWN && colBoxDown(object, collider);
+//
+//    }
+
+    public boolean colBoxLeft(GameObject object, GameObject collider) {
+        if (Math.abs((object.transform.position.x - object.renderer.centerRWidth) -
+                collider.transform.position.x - (collider.renderer.width * 3) - 12) <
+                (2 + 2) * object.transform.scale.x) {
+            if (Math.abs(object.transform.position.y - collider.transform.position.y) <
+                    ((object.renderer.height * 3) + (collider.renderer.height + object.renderer.centerRHeight)) * collider.transform.scale.y) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
-    public boolean boundingBox(Vector2f direction, int length) {
+    public boolean colBoxRight(GameObject object, GameObject collider) {
+        if (Math.abs((object.transform.position.x + object.renderer.centerRWidth) -
+                collider.transform.position.x + (collider.renderer.width * 3) + 12) <
+                (2 + 2) * object.transform.scale.x) {
+            if (Math.abs(object.transform.position.y - collider.transform.position.y) <
+                    ((object.renderer.height * 3) + (collider.renderer.height + object.renderer.centerRHeight)) * collider.transform.scale.y) {
+                return true;
+            }
+        }
 
+        return false;
+    }
+
+    public boolean colBoxUp(GameObject object, GameObject collider) {
+        if (Math.abs(object.transform.position.x - collider.transform.position.x + (collider.renderer.width * 2) + 12) <
+                (2 + 2) * object.transform.scale.x) {
+            if (Math.abs((object.transform.position.y + object.renderer.centerRHeight) - collider.transform.position.y) <
+                    (2 + 2) * object.transform.scale.y) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public boolean colBoxDown(GameObject object, GameObject collider) {
+        if (Math.abs((object.transform.position.x - object.renderer.centerRWidth) -
+                collider.transform.position.x - (collider.renderer.width * 3) + 12) <
+                (object.transform.position.x + (object.renderer.width * 3) + 2) * object.transform.scale.x) {
+            if (Math.abs((object.transform.position.y - object.renderer.centerRHeight) -
+                    (collider.transform.position.y + (collider.renderer.height * 3) + 12)) <
+                    (2 + 2) * collider.transform.scale.y) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

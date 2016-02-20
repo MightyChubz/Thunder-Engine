@@ -41,9 +41,18 @@ public class TestingClass extends Behavior implements MainGameMethods {
 
         colTest.transform.position = new Vector2f(500, 200);
 
-        if (player.collider.rayCast(colTest, new Vector2f(player.transform.position.x - 150.0f / 2, player.transform.position.y),
-                new Vector2f(player.renderer.renderWidth, player.renderer.renderHeight), new Vector2f(player.transform.position.x, 0)))
-            System.out.println("Collision!");
+        if (player.collider.colBoxLeft(player, colTest))
+            System.out.println("Collision! 1");
+
+        if (player.collider.colBoxRight(player, colTest))
+            System.out.println("Collision! 2");
+
+        if (player.collider.colBoxUp(player, colTest))
+            System.out.println("Collision! 3");
+
+        if (player.collider.colBoxDown(player, colTest))
+            System.out.println("Collision! 4");
+
 
         player.collider.keepWithinScreen(player.transform.position, player.renderer);
     }
