@@ -2,11 +2,13 @@ import com.MightyChubz.core.*;
 import com.MightyChubz.core.gfx.Behavior;
 import com.MightyChubz.core.gfx.Color;
 import com.MightyChubz.core.interfaces.MainGameMethods;
+import com.MightyChubz.core.mathf.Size;
 import com.MightyChubz.core.mathf.Vector2f;
 
 public class TestingClass extends Behavior implements MainGameMethods {
     GameObject player = new GameObject();
     GameObject colTest = new GameObject();
+
     Audio audioPlayer = new Audio();
 
     public void load() {
@@ -39,17 +41,14 @@ public class TestingClass extends Behavior implements MainGameMethods {
 //        player.transform.position.x = (float) deltaMouseX - player.renderer.centerRWidth;
 //        player.transform.position.y = (float) deltaMouseY - player.renderer.centerRHeight;
 
-        colTest.transform.position = new Vector2f(500, 200);
-
-        player.collider.keepWithinScreen(player.transform.position, player.renderer);
+        player.trigger.keepWithinScreen(player.transform.position, player.renderer);
     }
 
     public void render() {
         setScreenColor(Color.WHITE);
 
-        player.renderTexture();
-
         colTest.renderTexture();
+        player.renderTexture();
     }
 
     public void windowClose() {

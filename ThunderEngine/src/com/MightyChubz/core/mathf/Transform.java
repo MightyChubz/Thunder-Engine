@@ -9,7 +9,7 @@ package com.MightyChubz.core.mathf;
  * and the scale allow the game object texture, collision and geometry (if any) to expand.
  */
 public class Transform {
-    public Vector2f position = Vector2f.ZERO;
-    public Vector2f rotation = Vector2f.ZERO;
+    public Vector2f position = new Vector2f(0, 0);
+    public Vector2f rotation = new Vector2f(0, 0);
     public Vector2f scale = new Vector2f(1, 1);
 }

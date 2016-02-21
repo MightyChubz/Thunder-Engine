@@ -1,6 +1,7 @@
 package com.MightyChubz.core;
 
 import com.MightyChubz.core.gfx.Behavior;
+import com.MightyChubz.core.mathf.Size;
 import com.MightyChubz.core.mathf.Vector2f;
 
 /**
@@ -28,6 +29,7 @@ public class Collide {
             position.y -= 2;
     }
 
+    // TODO: Rewrite whole collision.
     /**
      * Creates collision box for trigger event.
      *
@@ -46,6 +48,4 @@ public class Collide {
 
         return false;
     }
-
-    // TODO: Rewrite whole collision.
 }

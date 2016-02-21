@@ -17,7 +17,7 @@ import static org.lwjgl.opengl.GL11.glPopMatrix;
 public class GameObject {
     public SpriteRenderer renderer = new SpriteRenderer();
     public Transform transform = new Transform();
-    public Collide collider = new Collide();
+    public Collide trigger = new Collide();
 
     /**
      * This is the most basic method in the class as all it does is draws images.
@@ -46,96 +46,5 @@ public class GameObject {
         }
         glEnd();
         glPopMatrix();
-    }
-
-    /**
-     * Currently this only draws the ray caster but has no logic toward it.
-     */
-    public void rayCastRight() {
-        glDisable(GL_TEXTURE_2D);
-        glPushMatrix();
-        glTranslatef(transform.position.x + renderer.centerRWidth,
-                transform.position.y + renderer.centerRHeight, 0.5f);
-        glColor3d(0, 1, 0);
-        glBegin(GL_LINES);
-        {
-            glVertex2d(0, 0);
-            glVertex2d(150, 0);
-        }
-        glEnd();
-        glPopMatrix();
-        glEnable(GL_TEXTURE_2D);
-    }
-
-    /**
-     * Currently this only draws the ray caster but has no logic toward it.
-     */
-    public void rayCastLeft() {
-        glDisable(GL_TEXTURE_2D);
-        glPushMatrix();
-        glTranslatef(transform.position.x + renderer.centerRWidth,
-                transform.position.y + renderer.centerRHeight, 0.5f);
-        glColor3d(0, 1, 0);
-        glBegin(GL_LINES);
-        {
-            glVertex2d(0, 0);
-            glVertex2d(-150, 0);
-        }
-        glEnd();
-        glPopMatrix();
-        glEnable(GL_TEXTURE_2D);
-    }
-
-    /**
-     * Currently this only draws the ray caster but has no logic toward it.
-     */
-    public void rayCastUp() {
-        glDisable(GL_TEXTURE_2D);
-        glPushMatrix();
-        glTranslatef(transform.position.x + renderer.centerRWidth,
-                transform.position.y + renderer.centerRHeight, 0.5f);
-        glColor3d(0, 1, 0);
-        glBegin(GL_LINES);
-        {
-            glVertex2d(0, 0);
-            glVertex2d(0, 150);
-        }
-        glEnd();
-        glPopMatrix();
-        glEnable(GL_TEXTURE_2D);
-    }
-
-    /**
-     * Currently this only draws the ray caster but has no logic toward it.
-     */
-    public void rayCastDown() {
-        glDisable(GL_TEXTURE_2D);
-        glPushMatrix();
-        glTranslatef(transform.position.x + renderer.centerRWidth,
-                transform.position.y + renderer.centerRHeight, 0.5f);
-        glColor3d(0, 1, 0);
-        glBegin(GL_LINES);
-        {
-            glVertex2d(0, 0);
-            glVertex2d(0, -150);
-        }
-        glEnd();
-        glPopMatrix();
-        glEnable(GL_TEXTURE_2D);
-    }
-
-    /**
-     * This return one of three components.
-     *
-     * @param className
-     * @return Object
-     */
-    public Object GetComponent(String className) {
-        HashMap<String, Object> objectStringHashMap = new HashMap<>();
-        objectStringHashMap.put("SpriteRenderer", renderer);
-        objectStringHashMap.put("Transform", transform);
-        objectStringHashMap.put("Collide", collider);
-
-        return objectStringHashMap.get(className);
     }
 }
