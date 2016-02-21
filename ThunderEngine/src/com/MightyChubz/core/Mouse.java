@@ -28,7 +28,7 @@ public class Mouse extends GLFWMouseButtonCallback {
         mouseButtons[button] = action != GLFW_RELEASE;
     }
 
-    public static boolean isKeyReleased(int button) {
+    public static boolean isKeyPressed(int button) {
         return mouseButtons[button];
     }
 

@@ -41,35 +41,11 @@ public class TestingClass extends Behavior implements MainGameMethods {
 
         colTest.transform.position = new Vector2f(500, 200);
 
-        // Collision works but scaling breaks it.
-        if (player.collider.boundBox(Vector2f.LEFT, player, colTest))
-            player.transform.position.x += 2;
-
-        if (player.collider.boundBox(Vector2f.RIGHT, player, colTest))
-            player.transform.position.x -= 2;
-
-        // Collision for top and bottom are broken and won't work.
-//        if (player.collider.boundBox(Vector2f.UP, player, colTest))
-//            player.transform.position.y -= 2;
-//
-//        if (player.collider.boundBox(Vector2f.DOWN, player, colTest))
-//            player.transform.position.y += 2;
-
-
         player.collider.keepWithinScreen(player.transform.position, player.renderer);
     }
 
     public void render() {
         setScreenColor(Color.WHITE);
-
-//        player.rayCastUp();
-//        player.rayCastRight();
-//        player.rayCastLeft();
-//        player.rayCastDown();
-
-//        if (Mouse.isKeyReleased(Mouse.THUNDER_MOUSE_LEFT)) {
-//            player.renderTexture();
-//        }
 
         player.renderTexture();
 
