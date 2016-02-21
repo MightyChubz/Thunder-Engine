@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23fbef2d-e66a-462f-bfe7-ced379701f97" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/MightyChubz/core/mathf/Size.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ThunderEngine_jar/ThunderEngine.jar" afterPath="$PROJECT_DIR$/out/artifacts/ThunderEngine_jar/ThunderEngine.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ThunderEngine/TestingClass.class" afterPath="$PROJECT_DIR$/out/production/ThunderEngine/TestingClass.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ThunderEngine/com/MightyChubz/core/Collide.class" afterPath="$PROJECT_DIR$/out/production/ThunderEngine/com/MightyChubz/core/Collide.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ThunderEngine/com/MightyChubz/core/Mouse.class" afterPath="$PROJECT_DIR$/out/production/ThunderEngine/com/MightyChubz/core/Mouse.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ThunderEngine/com/MightyChubz/core/SpriteRenderer.class" afterPath="$PROJECT_DIR$/out/production/ThunderEngine/com/MightyChubz/core/SpriteRenderer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ThunderEngine/com/MightyChubz/core/gfx/Texture.class" afterPath="$PROJECT_DIR$/out/production/ThunderEngine/com/MightyChubz/core/gfx/Texture.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TestingClass.java" afterPath="$PROJECT_DIR$/src/TestingClass.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/MightyChubz/core/Collide.java" afterPath="$PROJECT_DIR$/src/com/MightyChubz/core/Collide.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/MightyChubz/core/GameObject.java" afterPath="$PROJECT_DIR$/src/com/MightyChubz/core/GameObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/MightyChubz/core/mathf/Transform.java" afterPath="$PROJECT_DIR$/src/com/MightyChubz/core/mathf/Transform.java" />
     </list>
     <ignored path="ThunderEngine.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TestingClass.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TestingClass.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TestingClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.3511236">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,6 +57,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Audio.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/MightyChubz/core/Audio.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="GameObject.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/MightyChubz/core/GameObject.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -79,14 +81,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Collide.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Collide.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/MightyChubz/core/Collide.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.2949438">
-              <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/MightyChubz/core/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -336,7 +346,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="Main&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/Main.java&#10;Tran&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/mathf/Transform.java&#10;Game&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/GameObject.java&#10;resou&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/ResourceLoader.java&#10;Inpu&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/Input.java&#10;re&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/ResourceLoader.java&#10;tex&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/gfx/Texture.java&#10;Quad&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/gfx/QuadImage.java" />
+    <property name="SearchEverywhereHistoryKey" value="Au&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/Audio.java&#10;main&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/Main.java&#10;Main&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/Main.java&#10;Tran&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/mathf/Transform.java&#10;Game&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/GameObject.java&#10;resou&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/ResourceLoader.java&#10;Inpu&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/Input.java&#10;re&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/ResourceLoader.java&#10;tex&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/gfx/Texture.java&#10;Quad&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/gfx/QuadImage.java" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -648,7 +658,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2463002" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.225" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.225" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -706,9 +716,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1039,14 +1047,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/MightyChubz/core/Audio.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="131" column="7" selection-start-line="131" selection-start-column="7" selection-end-line="131" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/MightyChubz/core/SpriteRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1068,26 +1068,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/MightyChubz/core/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0">
-          <caret line="134" column="32" selection-start-line="134" selection-start-column="32" selection-end-line="134" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestingClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1119,8 +1099,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/MightyChubz/core/Collide.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2949438">
-          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/MightyChubz/core/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/MightyChubz/core/Audio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestingClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3511236">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

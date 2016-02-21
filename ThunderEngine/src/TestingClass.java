@@ -1,15 +1,15 @@
-import com.MightyChubz.core.*;
+import com.MightyChubz.core.GameObject;
+import com.MightyChubz.core.Input;
+import com.MightyChubz.core.Main;
+import com.MightyChubz.core.ResourceLoader;
 import com.MightyChubz.core.gfx.Behavior;
 import com.MightyChubz.core.gfx.Color;
 import com.MightyChubz.core.interfaces.MainGameMethods;
-import com.MightyChubz.core.mathf.Size;
 import com.MightyChubz.core.mathf.Vector2f;
 
 public class TestingClass extends Behavior implements MainGameMethods {
     GameObject player = new GameObject();
     GameObject colTest = new GameObject();
-
-    Audio audioPlayer = new Audio();
 
     public void load() {
         player.transform.scale = new Vector2f(1, 1);
@@ -19,10 +19,6 @@ public class TestingClass extends Behavior implements MainGameMethods {
         colTest.transform.scale = new Vector2f(1, 1);
         colTest.renderer.initQuadImage(ResourceLoader.LoadImageResource("Spritesheet.png"), 16, 16);
         colTest.renderer.setTextureFromQuad(0, colTest.transform.scale, 128);
-
-//        audioPlayer.initContext();
-//        audioPlayer.loadAudioFile(ResourceLoader.LoadResource("/Sad_Dreams.ogg"), true);
-//        audioPlayer.play();
     }
 
     public void update() {
@@ -52,7 +48,6 @@ public class TestingClass extends Behavior implements MainGameMethods {
     }
 
     public void windowClose() {
-//        audioPlayer.close();
     }
 
     public static void main(String[] args) {

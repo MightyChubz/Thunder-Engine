@@ -1,7 +1,6 @@
 package com.MightyChubz.core;
 
 import com.MightyChubz.core.gfx.Behavior;
-import com.MightyChubz.core.mathf.Size;
 import com.MightyChubz.core.mathf.Vector2f;
 
 /**
