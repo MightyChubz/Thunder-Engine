@@ -1,11 +1,7 @@
 package com.MightyChubz.core;
 
 import com.MightyChubz.core.gfx.Behavior;
-import com.MightyChubz.core.mathf.Transform;
 import com.MightyChubz.core.mathf.Vector2f;
-
-import static org.lwjgl.opengl.GL11.*;
-import static org.lwjgl.glfw.GLFW.*;
 
 /**
  * This class handles everything collision based.
@@ -20,16 +16,16 @@ public class Collide {
      */
     public void keepWithinScreen(Vector2f position, SpriteRenderer renderer) {
         if (position.x < 0)
-            position.x += 5;
+            position.x += 2;
 
         if (position.y < 0)
-            position.y += 5;
+            position.y += 2;
 
         if (position.x + renderer.width > Behavior.width)
-            position.x -= 5;
+            position.x -= 2;
 
         if (position.y + renderer.height > Behavior.height)
-            position.y -= 5;
+            position.y -= 2;
     }
 
     /**
@@ -51,21 +47,25 @@ public class Collide {
         return false;
     }
 
-//    public boolean boundBox(Vector2f direction, GameObject object, GameObject collider) {
-//        if (direction == Vector2f.LEFT)
-//            return colBoxLeft(object, collider);
-//
-//        if (direction == Vector2f.RIGHT)
-//            return colBoxRight(object, collider);
-//
+    public boolean boundBox(Vector2f direction, GameObject object, GameObject collider) {
+        if (direction == Vector2f.LEFT)
+            return colBoxLeft(object, collider);
+
+        if (direction == Vector2f.RIGHT)
+            return colBoxRight(object, collider);
+
 //        if (direction == Vector2f.UP)
 //            return colBoxUp(object, collider);
 //
 //        return direction == Vector2f.DOWN && colBoxDown(object, collider);
-//
-//    }
 
-    public boolean colBoxLeft(GameObject object, GameObject collider) {
+        return false;
+    }
+
+    // TODO: Rewrite whole collision.
+    // Collision has issues with scaling, top and bottom collision don't work.
+    // Issues with margin being to thick on top bounding box.
+    private boolean colBoxLeft(GameObject object, GameObject collider) {
         if (Math.abs((object.transform.position.x - object.renderer.centerRWidth) -
                 collider.transform.position.x - (collider.renderer.width * 3) - 12) <
                 (2 + 2) * object.transform.scale.x) {
@@ -78,7 +78,7 @@ public class Collide {
         return false;
     }
 
-    public boolean colBoxRight(GameObject object, GameObject collider) {
+    private boolean colBoxRight(GameObject object, GameObject collider) {
         if (Math.abs((object.transform.position.x + object.renderer.centerRWidth) -
                 collider.transform.position.x + (collider.renderer.width * 3) + 12) <
                 (2 + 2) * object.transform.scale.x) {
@@ -91,29 +91,29 @@ public class Collide {
         return false;
     }
 
-    public boolean colBoxUp(GameObject object, GameObject collider) {
-        if (Math.abs(object.transform.position.x - collider.transform.position.x + (collider.renderer.width * 2) + 12) <
-                (2 + 2) * object.transform.scale.x) {
-            if (Math.abs((object.transform.position.y + object.renderer.centerRHeight) - collider.transform.position.y) <
-                    (2 + 2) * object.transform.scale.y) {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
-    public boolean colBoxDown(GameObject object, GameObject collider) {
-        if (Math.abs((object.transform.position.x - object.renderer.centerRWidth) -
-                collider.transform.position.x - (collider.renderer.width * 3) + 12) <
-                (object.transform.position.x + (object.renderer.width * 3) + 2) * object.transform.scale.x) {
-            if (Math.abs((object.transform.position.y - object.renderer.centerRHeight) -
-                    (collider.transform.position.y + (collider.renderer.height * 3) + 12)) <
-                    (2 + 2) * collider.transform.scale.y) {
-                return true;
-            }
-        }
-
-        return false;
-    }
+//    private boolean colBoxUp(GameObject object, GameObject collider) {
+//        if (Math.abs((object.transform.position.x + object.renderer.centerRWidth) - (collider.transform.position.x + (collider.renderer.centerRWidth * 2) - 64)) <
+//                (Math.sqrt(object.transform.position.x * (object.renderer.width * 3 - 12)) + 2) * object.transform.scale.x) {
+//            if (Math.abs((object.transform.position.y + object.renderer.centerRHeight) - (collider.transform.position.y - collider.renderer.centerRHeight + 2)) <
+//                    (2 + 2) * object.transform.scale.y) {
+//                return true;
+//            }
+//        }
+//
+//        return false;
+//    }
+//
+//    private boolean colBoxDown(GameObject object, GameObject collider) {
+//        if (Math.abs((object.transform.position.x - object.renderer.centerRWidth) -
+//                collider.transform.position.x - (collider.renderer.centerRWidth * 16) + 12) <
+//                (object.transform.position.x + (object.renderer.centerRWidth * 2) + 2) * object.transform.scale.x) {
+//            if (Math.abs((object.transform.position.y - object.renderer.centerRHeight) -
+//                    (collider.transform.position.y + (collider.renderer.height * 3) + 12)) <
+//                    (2 + 2) * collider.transform.scale.y) {
+//                return true;
+//            }
+//        }
+//
+//        return false;
+//    }
 }

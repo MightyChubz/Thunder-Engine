@@ -24,34 +24,36 @@ public class TestingClass extends Behavior implements MainGameMethods {
     }
 
     public void update() {
-//        if (Input.isKeyDown(Input.THUNDER_W))
-//            player.transform.position.y -= 5;
-//
-//        if (Input.isKeyDown(Input.THUNDER_S))
-//            player.transform.position.y += 5;
-//
-//        if (Input.isKeyDown(Input.THUNDER_A))
-//            player.transform.position.x -= 5;
-//
-//        if (Input.isKeyDown(Input.THUNDER_D))
-//            player.transform.position.x += 5;
+        if (Input.isKeyDown(Input.THUNDER_W))
+            player.transform.position.y -= 2;
 
-        player.transform.position.x = (float) deltaMouseX - player.renderer.centerRWidth;
-        player.transform.position.y = (float) deltaMouseY - player.renderer.centerRHeight;
+        if (Input.isKeyDown(Input.THUNDER_S))
+            player.transform.position.y += 2;
+
+        if (Input.isKeyDown(Input.THUNDER_A))
+            player.transform.position.x -= 2;
+
+        if (Input.isKeyDown(Input.THUNDER_D))
+            player.transform.position.x += 2;
+
+//        player.transform.position.x = (float) deltaMouseX - player.renderer.centerRWidth;
+//        player.transform.position.y = (float) deltaMouseY - player.renderer.centerRHeight;
 
         colTest.transform.position = new Vector2f(500, 200);
 
-        if (player.collider.colBoxLeft(player, colTest))
-            System.out.println("Collision! 1");
+        // Collision works but scaling breaks it.
+        if (player.collider.boundBox(Vector2f.LEFT, player, colTest))
+            player.transform.position.x += 2;
 
-        if (player.collider.colBoxRight(player, colTest))
-            System.out.println("Collision! 2");
+        if (player.collider.boundBox(Vector2f.RIGHT, player, colTest))
+            player.transform.position.x -= 2;
 
-        if (player.collider.colBoxUp(player, colTest))
-            System.out.println("Collision! 3");
-
-        if (player.collider.colBoxDown(player, colTest))
-            System.out.println("Collision! 4");
+        // Collision for top and bottom are broken and won't work.
+//        if (player.collider.boundBox(Vector2f.UP, player, colTest))
+//            player.transform.position.y -= 2;
+//
+//        if (player.collider.boundBox(Vector2f.DOWN, player, colTest))
+//            player.transform.position.y += 2;
 
 
         player.collider.keepWithinScreen(player.transform.position, player.renderer);

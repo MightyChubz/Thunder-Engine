@@ -13,7 +13,6 @@ import java.awt.image.BufferedImage;
 public class SpriteRenderer {
     private QuadImage image;
     public int texture;
-    public boolean shouldInvert;
     public int renderWidth, renderHeight, width, height;
     public int centerRWidth, centerRHeight;
 
@@ -46,7 +45,7 @@ public class SpriteRenderer {
         height = image.sprites[index].getHeight();
         centerRWidth = renderWidth / 2;
         centerRHeight = renderHeight/ 2;
-        texture = Texture.LoadTexturePNG(image.sprites[index], shouldInvert);
+        texture = Texture.LoadTexturePNG(image.sprites[index]);
     }
 
     /**
@@ -64,6 +63,6 @@ public class SpriteRenderer {
         height = image.getHeight();
         centerRWidth = renderWidth / 2;
         centerRHeight = renderHeight/ 2;
-        texture = Texture.LoadTexturePNG(image, shouldInvert);
+        texture = Texture.LoadTexturePNG(image);
     }
 }
