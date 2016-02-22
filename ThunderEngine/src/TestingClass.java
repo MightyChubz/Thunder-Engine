@@ -1,6 +1,7 @@
 import com.MightyChubz.core.*;
 import com.MightyChubz.core.gfx.Behavior;
 import com.MightyChubz.core.gfx.Color;
+import com.MightyChubz.core.gfx.ResourceLoader;
 import com.MightyChubz.core.interfaces.MainGameMethods;
 import com.MightyChubz.core.mathf.Vector2f;
 

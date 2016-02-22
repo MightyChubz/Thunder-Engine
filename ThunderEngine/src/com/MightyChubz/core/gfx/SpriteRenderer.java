@@ -1,7 +1,5 @@
-package com.MightyChubz.core;
+package com.MightyChubz.core.gfx;
 
-import com.MightyChubz.core.gfx.QuadImage;
-import com.MightyChubz.core.gfx.Texture;
 import com.MightyChubz.core.mathf.Vector2f;
 
 import java.awt.image.BufferedImage;

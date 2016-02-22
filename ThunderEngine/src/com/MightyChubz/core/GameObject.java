@@ -1,9 +1,7 @@
 package com.MightyChubz.core;
 
+import com.MightyChubz.core.gfx.SpriteRenderer;
 import com.MightyChubz.core.mathf.Transform;
-import com.MightyChubz.core.mathf.Vector2f;
-
-import java.util.HashMap;
 
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.opengl.GL11.glPopMatrix;
