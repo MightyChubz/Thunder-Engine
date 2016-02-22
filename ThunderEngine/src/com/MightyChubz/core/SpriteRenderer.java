@@ -44,7 +44,7 @@ public class SpriteRenderer {
         width = image.sprites[index].getWidth();
         height = image.sprites[index].getHeight();
         centerRWidth = renderWidth / 2;
-        centerRHeight = renderHeight/ 2;
+        centerRHeight = renderHeight / 2;
         texture = Texture.LoadTexturePNG(image.sprites[index]);
     }
 

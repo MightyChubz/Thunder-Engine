@@ -14,6 +14,7 @@ import static org.lwjgl.opengl.GL11.glPopMatrix;
  * However, there are things that still need to be added to this class such as,
  * easy animation, physics and the ability to spawn other objects.
  */
+// TODO: Add full rotation support (as it doesn't work at the moment).
 public class GameObject {
     public SpriteRenderer renderer = new SpriteRenderer();
     public Transform transform = new Transform();
