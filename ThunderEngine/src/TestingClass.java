@@ -32,27 +32,28 @@ public class TestingClass extends Behavior implements MainGameMethods {
         box.position.x = player.transform.position.x;
         box.position.y = player.transform.position.y;
 
-        if (Input.isKeyDown(Input.THUNDER_W))
-            player.transform.position.y -= 2;
+//        if (Input.isKeyDown(Input.THUNDER_W))
+//            player.transform.position.y -= 2;
+//
+//        if (Input.isKeyDown(Input.THUNDER_S))
+//            player.transform.position.y += 2;
+//
+//        if (Input.isKeyDown(Input.THUNDER_A))
+//            player.transform.position.x -= 2;
+//
+//        if (Input.isKeyDown(Input.THUNDER_D))
+//            player.transform.position.x += 2;
 
-        if (Input.isKeyDown(Input.THUNDER_S))
-            player.transform.position.y += 2;
+        player.transform.position.x = (float) mouseX - player.renderer.centerRWidth;
+        player.transform.position.y = (float) mouseY - player.renderer.centerRHeight;
 
-        if (Input.isKeyDown(Input.THUNDER_A))
-            player.transform.position.x -= 2;
+//        if (player.trigger.boundingBoxCollisionRight(box, colTest))
+//            colTest.transform.position.x += 2;
+//
+//        if (player.trigger.boundingBoxCollisionLeft(box, colTest))
+//            colTest.transform.position.x -= 2;
 
-        if (Input.isKeyDown(Input.THUNDER_D))
-            player.transform.position.x += 2;
-
-//        player.transform.position.x = (float) deltaMouseX - player.renderer.centerRWidth;
-//        player.transform.position.y = (float) deltaMouseY - player.renderer.centerRHeight;
-
-        if (player.trigger.boundingBoxCollisionRight(box, colTest))
-            colTest.transform.position.x += 2;
-
-        if (player.trigger.boundingBoxCollisionLeft(box, colTest))
-            colTest.transform.position.x -= 2;
-
+        // This isn't used because collision doesn't as it should.
 //        if (player.trigger.boundingBoxCollisionTop(box, colTest))
 //            System.out.println("Collision! 3");
 

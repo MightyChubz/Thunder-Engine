@@ -155,7 +155,8 @@ public class Main implements Runnable {
     private void update() {
         glfwPollEvents();
 
-        Mouse.getMousePosition(window, newX, newY);
+        Mouse.setMousePosition(window);
+        Mouse.setDeltaMousePosition(window, newX, newY);
 
         methods.update();
     }
