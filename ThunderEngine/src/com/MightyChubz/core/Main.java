@@ -25,7 +25,6 @@ public class Main implements Runnable {
 
     private long window;
     private MainGameMethods methods;
-    private double newY = 400, newX = 500;
 
     private GLFWKeyCallback keyCallback;
     private GLFWMouseButtonCallback mouseButtonCallback;
@@ -33,9 +32,9 @@ public class Main implements Runnable {
     /**
      * The constructer gets the object that was given to it and checks if it was the MainGameMethods interface.
      * If it does, the class will start using calling it a parts of the class.
-     * @param className
      *
-     * @exception IllegalArgumentException;
+     * @param className
+     * @throws IllegalArgumentException;
      */
     public Main(Object className) {
         if (className instanceof MainGameMethods) {
@@ -68,13 +67,11 @@ public class Main implements Runnable {
         int frame = 0;
         int tick = 0;
         long lastTimer1 = System.currentTimeMillis();
-        boolean shouldRender = false;
 
         while (running) {
             long now = System.nanoTime();
             unprocessed += (now - lastTime) / nsPerTick;
             lastTime = now;
-            shouldRender = true;
 
             while (unprocessed > 1) {
                 unprocessed -= 1;
@@ -82,10 +79,8 @@ public class Main implements Runnable {
                 tick++;
             }
 
-            if (shouldRender) {
-                render();
-                frame++;
-            }
+            render();
+            frame++;
 
             try {
                 Thread.sleep(2);
@@ -111,8 +106,8 @@ public class Main implements Runnable {
      * The load method sets up the window, context and viewport.
      * Without this method most of the code given to the LWJGL would not work.
      *
-     * @exception IllegalArgumentException
-     * @exception RuntimeException
+     * @throws IllegalArgumentException
+     * @throws RuntimeException
      */
     private void load() {
         if (glfwInit() != GLFW_TRUE)
@@ -156,6 +151,8 @@ public class Main implements Runnable {
         glfwPollEvents();
 
         Mouse.setMousePosition(window);
+        double newY = 400;
+        double newX = 500;
         Mouse.setDeltaMousePosition(window, newX, newY);
 
         methods.update();

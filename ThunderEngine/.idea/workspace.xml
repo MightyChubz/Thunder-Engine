@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23fbef2d-e66a-462f-bfe7-ced379701f97" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TestingClass.java" afterPath="$PROJECT_DIR$/src/TestingClass.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/MightyChubz/core/Main.java" afterPath="$PROJECT_DIR$/src/com/MightyChubz/core/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/MightyChubz/core/Mouse.java" afterPath="$PROJECT_DIR$/src/com/MightyChubz/core/Mouse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/MightyChubz/core/gfx/Behavior.java" afterPath="$PROJECT_DIR$/src/com/MightyChubz/core/gfx/Behavior.java" />
     </list>
     <ignored path="ThunderEngine.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TestingClass.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestingClass.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TestingClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7240876">
-              <caret line="47" column="53" selection-start-line="47" selection-start-column="53" selection-end-line="47" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/MightyChubz/core/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="157" column="39" selection-start-line="157" selection-start-column="39" selection-end-line="157" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.3562044">
+              <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -188,8 +185,8 @@
         <option value="$PROJECT_DIR$/src/com/MightyChubz/core/gfx/SpriteRenderer.java" />
         <option value="$PROJECT_DIR$/src/com/MightyChubz/core/gfx/Behavior.java" />
         <option value="$PROJECT_DIR$/src/TestingClass.java" />
-        <option value="$PROJECT_DIR$/src/com/MightyChubz/core/Main.java" />
         <option value="$PROJECT_DIR$/src/com/MightyChubz/core/Mouse.java" />
+        <option value="$PROJECT_DIR$/src/com/MightyChubz/core/Main.java" />
       </list>
     </option>
   </component>
@@ -375,7 +372,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="tes&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/TestingClass.java&#10;mous&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/Mouse.java&#10;main&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/Main.java&#10;mou&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/Mouse.java&#10;be&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/gfx/Behavior.java&#10;au&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/Audio.java&#10;tran&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/mathf/Transform.java&#10;IO&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/IOUtil.java&#10;AU&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/Audio.java&#10;coll&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/Collide.java&#10;Game&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/GameObject.java&#10;Qu&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/gfx/QuadImage.java&#10;ren&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/SpriteRenderer.java&#10;Tes&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/TestingClass.java&#10;col&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/CollisionBox.java&#10;te&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/TestingClass.java&#10;Col&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/CollisionBox.java&#10;Au&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/Audio.java&#10;Main&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/Main.java&#10;Tran&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/mathf/Transform.java&#10;resou&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/ResourceLoader.java&#10;Inpu&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/Input.java&#10;re&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/ResourceLoader.java&#10;tex&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/gfx/Texture.java&#10;Quad&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/gfx/QuadImage.java" />
+    <property name="SearchEverywhereHistoryKey" value="main&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/Main.java&#10;tes&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/TestingClass.java&#10;mous&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/Mouse.java&#10;mou&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/Mouse.java&#10;be&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/gfx/Behavior.java&#10;au&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/Audio.java&#10;tran&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/mathf/Transform.java&#10;IO&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/IOUtil.java&#10;AU&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/Audio.java&#10;coll&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/Collide.java&#10;Game&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/GameObject.java&#10;Qu&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/gfx/QuadImage.java&#10;ren&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/SpriteRenderer.java&#10;Tes&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/TestingClass.java&#10;col&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/CollisionBox.java&#10;te&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/TestingClass.java&#10;Col&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/CollisionBox.java&#10;Au&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/Audio.java&#10;Main&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/Main.java&#10;Tran&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/mathf/Transform.java&#10;resou&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/ResourceLoader.java&#10;Inpu&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/Input.java&#10;re&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/ResourceLoader.java&#10;tex&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/gfx/Texture.java&#10;Quad&#9;FILE&#9;file://C:/Official Projects/ThunderEngine/ThunderEngine/src/com/MightyChubz/core/gfx/QuadImage.java" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -1143,10 +1140,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/MightyChubz/core/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/TestingClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="157" column="39" selection-start-line="157" selection-start-column="39" selection-end-line="157" selection-end-column="39" />
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1161,10 +1158,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestingClass.java">
+    <entry file="file://$PROJECT_DIR$/src/com/MightyChubz/core/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7240876">
-          <caret line="47" column="53" selection-start-line="47" selection-start-column="53" selection-end-line="47" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.3562044">
+          <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
