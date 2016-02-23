@@ -4,7 +4,6 @@ import com.MightyChubz.core.gfx.SpriteRenderer;
 import com.MightyChubz.core.mathf.Transform;
 
 import static org.lwjgl.opengl.GL11.*;
-import static org.lwjgl.opengl.GL11.glPopMatrix;
 
 /**
  * While this class is still under heavy work it is still very usable.
