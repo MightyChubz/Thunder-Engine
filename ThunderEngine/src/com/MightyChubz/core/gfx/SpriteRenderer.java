@@ -13,6 +13,7 @@ public class SpriteRenderer {
     public int texture;
     public int renderWidth, renderHeight, width, height;
     public int centerRWidth, centerRHeight;
+    public Vector2f offset;
 
     /**
      * This method initializes the quad image class to allow sprite sheets to be used.
