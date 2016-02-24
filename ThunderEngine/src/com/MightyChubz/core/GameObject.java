@@ -15,7 +15,7 @@ import static org.lwjgl.opengl.GL11.*;
 public class GameObject {
     public SpriteRenderer renderer = new SpriteRenderer();
     public Transform transform = new Transform();
-    public Collide trigger = new Collide();
+    public Collide collider = new Collide();
 
     /**
      * This is the most basic method in the class as all it does is draws images.

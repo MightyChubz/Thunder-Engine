@@ -1,5 +1,8 @@
 package com.MightyChubz.core.mathf;
 
+/**
+ * Holds values for width and height.
+ */
 public class Size {
     public int width, height;
 
