@@ -1,5 +1,6 @@
 package com.MightyChubz.core;
 
+import com.MightyChubz.core.gfx.ResourceLoader;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.openal.ALCCapabilities;
 import org.lwjgl.openal.ALContext;

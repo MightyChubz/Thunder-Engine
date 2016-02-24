@@ -28,28 +28,47 @@ public class Mouse extends GLFWMouseButtonCallback {
         mouseButtons[button] = action != GLFW_RELEASE;
     }
 
-    public static boolean isKeyReleased(int button) {
+    public static boolean isKeyPressed(int button) {
         return mouseButtons[button];
     }
 
-    public static void getMousePosition(long window, double newX, double newY) {
-        DoubleBuffer xpos = BufferUtils.createDoubleBuffer(8);
-        DoubleBuffer ypos = BufferUtils.createDoubleBuffer(8);
+    public static void setMousePosition(long window) {
+        DoubleBuffer xPos = BufferUtils.createDoubleBuffer(8);
+        DoubleBuffer yPos = BufferUtils.createDoubleBuffer(8);
 
-        glfwGetCursorPos(window, xpos, ypos);
+        glfwGetCursorPos(window, xPos, yPos);
 
-        xpos.rewind();
-        ypos.rewind();
+        xPos.rewind();
+        yPos.rewind();
 
-        newY = ypos.get();
-        newX = xpos.get();
+        double x, y;
+        x = xPos.get();
+        y = yPos.get();
+
+        Behavior.setMousePos(x, y);
+
+        xPos.clear();
+        yPos.clear();
+    }
+
+    public static void setDeltaMousePosition(long window, double newX, double newY) {
+        DoubleBuffer xPos = BufferUtils.createDoubleBuffer(8);
+        DoubleBuffer yPos = BufferUtils.createDoubleBuffer(8);
+
+        glfwGetCursorPos(window, xPos, yPos);
+
+        xPos.rewind();
+        yPos.rewind();
+
+        newY = yPos.get();
+        newX = xPos.get();
 
         double deltaX = newX;
         double deltaY = newY;
 
         Behavior.setDeltaMousePos(deltaX, deltaY);
 
-        xpos.clear();
-        ypos.clear();
+        xPos.clear();
+        yPos.clear();
     }
 }

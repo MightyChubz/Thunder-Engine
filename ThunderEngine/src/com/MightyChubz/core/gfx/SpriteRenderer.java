@@ -1,7 +1,5 @@
-package com.MightyChubz.core;
+package com.MightyChubz.core.gfx;
 
-import com.MightyChubz.core.gfx.QuadImage;
-import com.MightyChubz.core.gfx.Texture;
 import com.MightyChubz.core.mathf.Vector2f;
 
 import java.awt.image.BufferedImage;
@@ -15,6 +13,7 @@ public class SpriteRenderer {
     public int texture;
     public int renderWidth, renderHeight, width, height;
     public int centerRWidth, centerRHeight;
+    public Vector2f offset;
 
     /**
      * This method initializes the quad image class to allow sprite sheets to be used.
@@ -44,7 +43,7 @@ public class SpriteRenderer {
         width = image.sprites[index].getWidth();
         height = image.sprites[index].getHeight();
         centerRWidth = renderWidth / 2;
-        centerRHeight = renderHeight/ 2;
+        centerRHeight = renderHeight / 2;
         texture = Texture.LoadTexturePNG(image.sprites[index]);
     }
 

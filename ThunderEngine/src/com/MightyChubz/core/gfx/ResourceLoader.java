@@ -1,4 +1,4 @@
-package com.MightyChubz.core;
+package com.MightyChubz.core.gfx;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
