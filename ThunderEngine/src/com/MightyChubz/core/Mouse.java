@@ -8,6 +8,9 @@ import java.nio.DoubleBuffer;
 
 import static org.lwjgl.glfw.GLFW.*;
 
+/**
+ * Controls the position, delta and input of the mouse.
+ */
 public class Mouse extends GLFWMouseButtonCallback {
     public static final boolean[] mouseButtons = new boolean[55536];
 
@@ -24,14 +27,33 @@ public class Mouse extends GLFWMouseButtonCallback {
     public static final int THUNDER_MOUSE_BUTTON_7 = GLFW_MOUSE_BUTTON_7;
     public static final int THUNDER_MOUSE_BUTTON_8 = GLFW_MOUSE_BUTTON_8;
 
+    /**
+     * Detects any input coming from the mouse.
+     *
+     * @param window
+     * @param button
+     * @param action
+     * @param mods
+     */
     public void invoke(long window, int button, int action, int mods) {
         mouseButtons[button] = action != GLFW_RELEASE;
     }
 
+    /**
+     * Checks weather or not the mouse button is pressed.
+     *
+     * @param button
+     * @return boolean
+     */
     public static boolean isKeyPressed(int button) {
         return mouseButtons[button];
     }
 
+    /**
+     * Sets the mouse position, this is only used by the Main class.
+     *
+     * @param window
+     */
     public static void setMousePosition(long window) {
         DoubleBuffer xPos = BufferUtils.createDoubleBuffer(8);
         DoubleBuffer yPos = BufferUtils.createDoubleBuffer(8);
@@ -51,6 +73,13 @@ public class Mouse extends GLFWMouseButtonCallback {
         yPos.clear();
     }
 
+    /**
+     * Sets the delta of the mouse, this is only used by the Main class.
+     *
+     * @param window
+     * @param newX
+     * @param newY
+     */
     public static void setDeltaMousePosition(long window, double newX, double newY) {
         DoubleBuffer xPos = BufferUtils.createDoubleBuffer(8);
         DoubleBuffer yPos = BufferUtils.createDoubleBuffer(8);

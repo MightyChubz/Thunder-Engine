@@ -50,25 +50,25 @@ public class TestingClass extends Behavior implements MainGameMethods {
         boxLeft.multiplier = new Vector2f(3, 2);
         boxLeft.offset = new Vector2f(0, 0);
         colTest.renderer.offset = new Vector2f(colTest.renderer.centerRWidth, 0);
-        if (player.trigger.boundingBoxTrigger(boxLeft, colTest))
+        if (player.collider.boundingBoxCollider(boxLeft, colTest))
             colTest.transform.position.x -= 3;
 
         boxLeft.multiplier = new Vector2f(3, 2);
         boxLeft.offset = new Vector2f(boxLeft.alignMode.x - (boxLeft.imageSize.width * boxLeft.multiplier.x + 15), 0);
         colTest.renderer.offset = new Vector2f(-colTest.renderer.centerRWidth, 0);
-        if (player.trigger.boundingBoxTrigger(boxLeft, colTest))
+        if (player.collider.boundingBoxCollider(boxLeft, colTest))
             colTest.transform.position.x += 3;
 
         boxLeft.multiplier = new Vector2f(3, 1);
         boxLeft.offset = new Vector2f(0, -(boxLeft.imageSize.height + 16));
         colTest.renderer.offset = new Vector2f(0, -colTest.renderer.centerRHeight);
-        if (player.trigger.boundingBoxTrigger(boxLeft, colTest))
+        if (player.collider.boundingBoxCollider(boxLeft, colTest))
             colTest.transform.position.y += 3;
 
         boxLeft.multiplier = new Vector2f(3, 1);
         boxLeft.offset = new Vector2f(0, boxLeft.alignMode.y - (boxLeft.imageSize.height * boxLeft.multiplier.y + 16));
         colTest.renderer.offset = new Vector2f(0, colTest.renderer.centerRHeight);
-        if (player.trigger.boundingBoxTrigger(boxLeft, colTest))
+        if (player.collider.boundingBoxCollider(boxLeft, colTest))
             colTest.transform.position.y -= 3;
     }
 

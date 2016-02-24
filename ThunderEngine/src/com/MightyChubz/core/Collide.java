@@ -5,7 +5,7 @@ package com.MightyChubz.core;
  */
 public class Collide {
     /**
-     * Creates collision box for trigger event.
+     * Creates collision box for collider event.
      *
      * @param object
      * @param collider
@@ -23,7 +23,14 @@ public class Collide {
         return false;
     }
 
-    public boolean boundingBoxTrigger(CollisionBox box, GameObject collider) {
+    /**
+     * Creates collision box for collision event.
+     *
+     * @param box
+     * @param collider
+     * @return boolean
+     */
+    public boolean boundingBoxCollider(CollisionBox box, GameObject collider) {
         if (Math.abs((box.position.x + box.offset.x) - (collider.transform.position.x + collider.renderer.offset.x)) <
                 ((box.imageSize.width * box.multiplier.x) + box.imageSize.width) * collider.transform.scale.x) {
             if (Math.abs((box.position.y + box.offset.y) - (collider.transform.position.y + collider.renderer.offset.y)) <

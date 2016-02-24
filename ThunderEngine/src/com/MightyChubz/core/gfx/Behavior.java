@@ -99,6 +99,12 @@ public class Behavior {
         deltaMouseY = y;
     }
 
+    /**
+     * Sets the mouse position.
+     *
+     * @param x
+     * @param y
+     */
     public static void setMousePos(double x, double y) {
         mouseX = x;
         mouseY = y;
